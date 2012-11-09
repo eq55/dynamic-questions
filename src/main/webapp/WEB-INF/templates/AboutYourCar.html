@@ -1,0 +1,289 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+	<head>
+		<title tiles:fragment="title">About Your Car</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<meta name="description" content="LV= Car Insurance - About Your Car" />
+    	<meta name="author" content="LV=" />
+   
+		<link rel="stylesheet" th:href="@{/css/lv/templateStyle.css}" href="../../css/lv/templateStyle.css" />
+    	<link rel="stylesheet" th:href="@{/css/lv/overlays.css}" href="../../css/lv/overlays.css" />
+    	<link rel="stylesheet" th:href="@{/css/jquery.ui/jquery-ui-1.8.custom.css}" />
+    	<link rel="stylesheet" th:href="@{/css/lv/responsive.css}" href="../../css/lv/responsive.css" />
+  </head>
+	<body>
+		<div tiles:fragment="formContent">
+			<form id="quote" class="content" action="/GI_QB2/motor" method="post">
+				<div id="leftColumn">
+					<h2>Your car details</h2>
+					<input type="hidden" name="execution" value="" />
+					<label>Your	car is a: </label>
+					<h3> Renault MEGANE DYNAMIQUE DCI 2002
+						<input type="image" alt="Change Car" th:src="@{/images/lv/AboutYourCar/changeCarBtn.png}" src="../../images/lv/AboutYourCar/changeCarBtn.png" name="_eventId_ChangeCar" />
+					</h3>
+					<div class="row" id="row_canonicalQuote_quoteRisk_vehicle_marketValue">
+						<label th:text="#{aboutYourCar.marketValue.question}" class="question" id="label_canonicalQuote_quoteRisk_vehicle_marketValue" for="canonicalQuote_quoteRisk_vehicle_marketValue">
+							Estimated market value of your car?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_marketValue">
+						</span>
+						<span class="mandatory"	id="mand_canonicalQuote_quoteRisk_vehicle_marketValue" title="This is a required field">
+						 	*
+						 </span>
+						 <span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_marketValue">
+						 </span>
+						 <select class="answer" name="canonicalQuote.quoteRisk.vehicle.marketValue" id="canonicalQuote_quoteRisk_vehicle_marketValue" title="Please select your estimated market">
+							<option value="">Please select</option>
+							<option value="20000">Up to 20,000</option>
+							<option value="35000">20,001-35,000</option>
+							<option value="50000">35,001-50,000</option>
+							<option value="70000">50,001-70,000</option>
+							<option value="90000">70,001-90,000</option>
+							<option value="100000">90,001-100,000</option>
+							<option value="110000">over 100,001</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					<div class="row " id="row_canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage">
+						<label th:text="#{aboutYourCar.mileage.question}" class="question" id="label_canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage"	for="canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage">
+							Estimated annual mileage
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage">
+						</span>
+						<span class="mandatory"	id="mand_canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage"	title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage">
+						</span>
+						<select class="answer" name="canonicalQuote.quoteRisk.proposal.motorCover.vehicleAnnualMileage" id="canonicalQuote_quoteRisk_proposal_motorCover_vehicleAnnualMileage" title="Please select your estimated annual mileage">
+							<option value="">Please select</option>
+							<option value="1000">up to 1,000</option>
+							<option value="2000">up to 2,000</option>
+							<option value="3000">up to 3,000</option>
+							<option value="5000">up to 5,000</option>
+							<option value="6000">up to 6,000</option>
+							<option value="7000">up to 7,000</option>
+							<option value="8000">up to 8,000</option>
+							<option value="9000">up to 9,000</option>
+							<option value="10000">up to 10,000</option>
+							<option value="11000">up to 11,000</option>
+							<option value="12000">up to 12,000</option>
+							<option value="13000">up to 13,000</option>
+							<option value="14000">up to 14,000</option>
+							<option value="15000">up to 15,000</option>
+							<option value="16000">up to 16,000</option>
+							<option value="17000">up to 17,000</option>
+							<option value="19000">up to 19,000</option>
+							<option value="20000">up to 20,000</option>
+							<option value="22000">up to 22,000</option>
+							<option value="23000">up to 23,000</option>
+							<option value="24000">up to 24,000</option>
+							<option value="25000">up to 25,000</option>
+							<option value="26000">up to 26,000</option>
+							<option value="27000">up to 27,000</option>
+							<option value="28000">up to 28,000</option>
+							<option value="29000">up to 29,000</option>
+							<option value="30000">up to 30,000</option>
+							<option value="31000">over 30,000</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					<div class="row" id="row_canonicalQuote_quoteRisk_vehicle_purchaseDate">
+						<label class="question"	id="label_canonicalQuote_quoteRisk_vehicle_purchaseDate" for="canonicalQuote_quoteRisk_vehicle_purchaseDate"> 
+							Car purchase date?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_purchaseDate">
+						</span>
+						<span class="mandatory" id="mand_canonicalQuote_quoteRisk_vehicle_purchaseDate"	title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_purchaseDate">
+						</span> 
+						<select	class="answer" name="canonicalQuote.quoteRisk.vehicle.purchaseDate" id="canonicalQuote_quoteRisk_vehicle_purchaseDate" title="Please select your purchase date">
+							<option value="">Please select</option>
+							<option value="01/01/2002">2002</option>
+							<option value="01/01/2003">2003</option>
+							<option value="01/01/2004">2004</option>
+							<option value="01/01/2005">2005</option>
+							<option value="01/01/2006">2006</option>
+							<option value="01/01/2007">2007</option>
+							<option value="01/01/2008">2008</option>
+							<option value="01/01/2009">2009</option>
+							<option value="01/01/2010">2010</option>
+							<option value="01/01/2011">2011</option>
+							<option value="01/01/2012">2012</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					
+					
+					<div class="row" id="row_canonicalQuote_quoteRisk_vehicle_security_locationKeptNight">
+						<label class="question" id="label_canonicalQuote_quoteRisk_vehicle_security_locationKeptNight" for="canonicalQuote_quoteRisk_vehicle_security_locationKeptNight">
+							Where do you keep your car overnight?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_security_locationKeptNight">
+						</span>
+						<span class="mandatory" id="mand_canonicalQuote_quoteRisk_vehicle_security_locationKeptNight" title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_security_locationKeptNight">
+						</span>
+						<select class="answer" name="canonicalQuote.quoteRisk.vehicle.security.locationKeptNight" id="canonicalQuote_quoteRisk_vehicle_security_locationKeptNight" title="Please select where you keep your car overnight">
+							<option value="">Please select</option>
+							<option value="8">Parked in a drive at home</option>
+							<option value="1">Garaged at home address</option>
+							<option value="D">Parked on road at home address</option>
+							<option value="H">Parked on road not at home address</option>
+							<option value="G">In a secured carpark</option>
+							<option value="F">In an unsecured carpark</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					<div tiles:fragment="postcodeQuestion" th:class="'row ' + ${tickOrCross}"   class="row" id="row_canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight">
+						<label class="question" id="label_canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight" for="canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight">
+							Postcode where the car is kept overnight?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight">
+						</span>
+						<span class="mandatory"	id="mand_canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight" title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight">
+						</span>
+						<input class="answer" type="text" name="canonicalQuote.quoteRisk.vehicle.security.postcodeOvernight" id="canonicalQuote_quoteRisk_vehicle_security_postcodeOvernight" th:value="${postcode}" title="Please enter the postcode where the car is kept overnight" />
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					<div class="row " id="row_hasModifications">
+						<label class="question" id="label_hasModifications" for="hasModifications">
+							Has your car been modified?
+						</label>
+						<span class="help" id="help_hasModifications">
+						</span>
+						<span class="mandatory" id="mand_hasModifications" title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_hasModifications">
+						</span>
+						<fieldset class="answer" title="Please tell us if the car has been modified">
+							<span>
+								<input type="radio" id="hasModifications" name="hasModifications" value="true" />
+								<label for="hasModifications">
+									Yes
+								</label>
+							</span>
+							<span>
+								<input type="radio" id="hasModifications_2"	name="hasModifications" value="false" />
+								<label for="hasModifications_2">
+									No
+								</label>
+							</span>
+							<span class="tickcross">
+							</span>
+						</fieldset>
+						<hr />
+					</div>
+					<div class="row " id="row_canonicalQuote_quoteRisk_vehicle_owner">
+						<label class="question" id="label_canonicalQuote_quoteRisk_vehicle_owner" for="canonicalQuote_quoteRisk_vehicle_owner">
+							Legal owner of the car?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_owner">
+						</span>
+						<span class="mandatory" id="mand_canonicalQuote_quoteRisk_vehicle_owner" title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_owner">
+						</span>
+						<select	class="answer" name="canonicalQuote.quoteRisk.vehicle.owner" id="canonicalQuote_quoteRisk_vehicle_owner" title="Please select the legal owner of the car">
+							<option value="">Please select</option>
+							<option value="1">I am (proposer)</option>
+							<option value="7">My spouse/partner/civil partner</option>
+							<option value="6">Parent(s)</option>
+							<option value="8">Son/daughter</option>
+							<option value="3">A company</option>
+							<option value="4">A lease company</option>
+							<option value="5">Other</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+					</div>
+					<div class="row " id="row_canonicalQuote_quoteRisk_vehicle_keeper">
+						<label class="question" id="label_canonicalQuote_quoteRisk_vehicle_keeper" for="canonicalQuote_quoteRisk_vehicle_keeper">
+							Registered keeper of the car?
+						</label>
+						<span class="help" id="help_canonicalQuote_quoteRisk_vehicle_keeper">
+						</span>
+						<span class="mandatory" id="mand_canonicalQuote_quoteRisk_vehicle_keeper" title="This is a required field">
+							*
+						</span>
+						<span class="prefix" id="prfx_canonicalQuote_quoteRisk_vehicle_keeper">
+						</span>
+						<select	class="answer" name="canonicalQuote.quoteRisk.vehicle.keeper" id="canonicalQuote_quoteRisk_vehicle_keeper" title="Please select the registered keeper of the car">
+							<option value="">Please select</option>
+							<option value="1">I am (proposer)</option>
+							<option value="7">My spouse/partner/civil partner</option>
+							<option value="6">Parent(s)</option>
+							<option value="8">Son/daughter</option>
+							<option value="3">A company</option>
+							<option value="4">A lease company</option>
+							<option value="5">Other</option>
+						</select>
+						<span class="tickcross">
+						</span>
+						<hr />
+						<input id="key" type="hidden" name="key" th:value="${flowExecutionKey}" />
+					</div>
+					<input id="submit" type="image" th:src="@{/images/lv/nextBtn.png}" src="../../images/lv/nextBtn.png" name="_eventId_Next" alt="Next" />
+				</div>
+				<div id="rightColumn">
+					<div>
+						<h2>Got a question?</h2>
+						<h3>
+							Try our <a href="#"> interactive FAQs</a>
+						</h3>
+					</div>
+					<div id="liveChat">
+						<img title="Chat Now" alt="Chat Now" th:src="@{/images/lv/liveChatPlaceholder.png}" src="../../images/lv/liveChatPlaceholder.png"/>
+						<p>Chat online with one of our specialists</p>
+						<img title="Chat Now" alt="Chat Now" th:src="@{/images/lv/chatBtn.png}" src="../../images/lv/chatBtn.png" />
+					</div>
+					<div id="contactDetails">
+						<h4>Call our UK call centre</h4>
+						<h5>0800 197 0517</h5>
+						<p>
+							<strong>Lines open:</strong>
+						</p>
+						<p>8am - 9pm Mon to Fri</p>
+						<p>8am - 5pm Sat</p>
+						<p>8am - 5pm Sun and bank holidays</p>
+					</div>
+					<div id="awards">
+						<h2>Award winning cover:</h2>
+						<p>Lorem ipsum dolor sit amet, con-</p>
+						<p>sectetur adipiscing elit.</p>
+						<img alt="Which?" title="Which?" th:src="@{/images/lv/whichAward.png}" src="../../images/lv/whichAward.png" />
+						<p>Nullam vestibulum, dui vel volutpat</p>
+						<p>Cum sociis natoque penatibus</p>
+						<img alt="Defaqto Award Winner" title="Defaqto Award Winner" th:src="@{/images/lv/defaqtoAward.png}" src="../../images/lv/defaqtoAward.png" />
+						<a href="./Help.htm?LV.Motor.AboutYou.seeWhyWeWon" title="See why we won" class="linkToOverlay">
+							See why we won
+						</a>
+					</div>
+				</div>
+				<div>
+					<input type="image" th:src="@{/images/lv/Common/backBtn.png}" src="../../images/lv/Common/backBtn.png" name="_eventId_Back" alt="Back" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,518 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-------------------- CSS Reset End -------------------------------------------*/
+body{
+	font-family:Tahoma,sans-serif;
+	font-size:62.5%;
+	color:#00f;
+}
+
+/*to do make gradient other browser compliant*/
+#header{
+	margin: 0 auto;
+	background:#004F65;
+	background-image:-moz-linear-gradient(top, #5086B9, #1B5296);
+	background-image:-webkit-linear-gradient(top, #5086B9, #1B5296);
+	overflow:hidden;
+	behavior: url('./css/css3pie/PIE.1.0.htc');
+}
+/* Replace with font-face kit */
+#header h1{
+	color:#fff;
+	font-size:2.0em;
+	font-weight:bold;
+	position:relative;
+	top:25px;
+	left:145px;
+	display:inline;
+	}
+#header #hearts{
+	float:right;
+	}
+#header #logo{
+	float:left;
+	padding-top:15px;
+	}
+#progressBar {
+	overflow:hidden;
+	display:none;
+	}
+#progressBar div.progressBarContainer {
+	width:960px !important;
+	margin:0 auto;
+	position:relative;
+	z-index:999;
+	display:none;
+	}
+#progressBar div.progressBarBackground {
+	width:50% !important;
+	position:absolute;
+	background-image:url(../../images/lv/progressBar/border_off.png);
+	height:36px;
+	display:none;
+	}
+#progressBar div.progressBarOnBackground{
+	background-image:url(../../images/lv/progressBar/border_on.png);
+	display:none;
+	}
+#progressBar div.progressBarBackgroundRight {
+	right:0;
+	display:none;
+	}
+#progressBar li {
+	float:left;
+	list-style:none;
+	padding-right:20px;
+	background-image:url(../../images/lv/progressBar/seperator_off_off.png);
+	background-position:
+	top right;
+	background-repeat:no-repeat;
+	display:none;
+	}
+#progressBar li.on_off {
+	background-image:url(../../images/lv/progressBar/seperator_on_off.png);
+	display:none;
+	}
+#progressBar li.off_on{
+	background-image:url(../../images/lv/progressBar/seperator_off_on.png);
+	display:none;
+	}
+#progressBar li.last {
+	padding:0;
+	background:none;
+	display:none;
+	}
+#section {
+	margin-top:10px;
+	position:relative;
+	height:650px;
+	}
+#quote {
+    position: relative;
+}
+#leftColumn{
+	/* Width is 708px in total */
+	float:left;
+	width:706px;
+	background:#E9E2E1;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	border:solid #E9E2E1 1px;
+	padding:18px 0;
+	margin-bottom:12px;
+	behavior: url('./css/css3pie/PIE.1.0.htc');
+	}
+#leftColumn h2{
+	font-weight:bold;
+	font-size:2.0em;
+	padding:0 0 6px 8px;
+	margin:0 10px 14px 10px;
+	border-bottom:2px #d9e4e6 solid;
+	}
+#leftColumn h3{
+	font-weight:bold;
+	margin-left:18px;
+	font-size:1.3em;
+	}
+#leftColumn h4{
+	font-weight:bold;
+	margin-left:18px;
+	font-size:1.4em;
+	}
+#leftColumn p{
+	}
+#leftColumn label{
+	display:block;
+	margin-left:18px;
+	padding-bottom:6px;
+	font-family:Arial;
+	font-size:1.3em;
+	}
+#leftColumn input[type=image]{
+	margin-left:18px;
+	margin-bottom:11px;
+	vertical-align:middle;
+	}
+#leftColumn hr{
+	margin:0 auto;
+	border-top:#e6eeef solid 1px;
+	border-bottom:#fff solid 1px;
+	width:688px;
+	color:fff;
+	border-left:#fff solid 1px;
+	}
+#leftColumn .greenSelected hr{
+	visibility:hidden !important;
+	}
+#leftColumn .questionInError hr{
+	visibility:hidden !important;
+	}
+#rightColumn{
+	float:right;
+	width:252px;
+	padding:20px 0;
+	}
+#rightColumn h2{
+	font-weight:bold;
+	font-size:1.6em;
+	margin-bottom:5px;
+	}
+#rightColumn h3{
+	font-weight:normal;
+	font-size:1.4em;
+	}
+#rightColumn h4{
+	font-size:1.4em;
+	font-weight:normal;
+	}
+#rightColumn h5{
+	font-weight:bold;
+	font-size:2.2em;
+	}
+#rightColumn p{
+	font-size:1.3em;
+	color:#185d75;
+	font-family:Arial;
+	}
+#rightColumn a:link, #rightColumn a:visited, #rightColumn a:hover, #rightColumn a:active{
+	color:#546b08;
+	}
+#rightColumn #awards a{
+	display:block;
+	text-align:right;
+	font-family:Arial;
+	font-size:1.3em;
+	}
+#rightColumn #awards p{
+	font-family:Arial;
+	font-size:1.3em;
+	color:#185d75;
+	}
+#rightColumn div{
+	border-bottom:solid 1px #d9e4e6;
+	padding-left:18px;
+	margin-bottom:12px;
+	padding-bottom:12px;
+	}
+#rightColumn div:last-child, #rightColumn div:first-child{
+	border:none;
+	}
+#rightColumn #liveChat{
+	background:#e9f3f4;
+	padding:20px 10px 0 10px;
+	overflow:hidden;
+	width:95%;
+	}
+#rightColumn #liveChat img{
+	float:left;
+	}
+#rightColumn #awards img{
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+
+/* data protection wording section */
+#dataProtection {
+	margin: 2em 0;	
+}
+#dataProtection p {
+	margin-left:18px;
+	font-size: 1.3em;
+	font-family: Arial;
+	padding-bottom: 6px;
+}
+#dataProtection h3 {
+	font-size: 1.3em;
+	padding-left: 30px;
+	line-height: 35px;
+	background-image: url(../../images/lv/padlock.png);
+	background-repeat: no-repeat;
+}
+#dataProtection label {
+	display: inline;	
+}
+
+
+#footer{
+	clear:left;
+	color:#fff;
+	background-image:-moz-linear-gradient(top, #5086B9, #1B5296);
+	background: -ms-linear-gradient(#5086B9, #1B5296); /* IE10 */
+	background: -webkit-gradient(linear, left top, left bottom,  #5086B9,  #1B5296); /* Safari 4+, Chrome 2+ */
+	background: -webkit-linear-gradient(#5086B9,  #1B5296); /* Safari, Chrome*/
+	background: -o-linear-gradient(#5086B9, white); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5086B9', endColorstr='#1B5296'); /* IE6 & IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5086B9', endColorstr='#1B5296')"; /* IE8+ */
+	Padding:25px 0;
+	margin-top:20px;
+}
+#footer img{
+	float:left;
+	}
+#footer #temp{
+	font-family:Arial;
+	font-size:1.3em;
+	text-align:right;
+	margin-top:16px;
+	}
+.answer{
+	margin-left:18px;
+	border:solid 1px #C9D6E0;
+	font-family:Arial;
+	margin-bottom:11px;
+	}
+select.answer{
+	min-width:130px;
+	}
+fieldset.answer{
+	border:none;
+	}
+fieldset input{
+	display:block;
+	float:left;
+	margin:0 !important;
+	padding:0 !important;
+	}
+fieldset label{
+	float:left;
+	font-weight:bold;
+	margin-left:2px !important;
+	padding-right:10px;
+	line-height:14px;
+	}
+/* To do Style for pure */
+.no-js .help{
+	}
+.mandatory, .js .help{
+	display:block;
+	float:left;
+	text-indent:-60000px;
+	}
+.row{
+	border:solid 1px #E9E2E1;
+	padding-top:11px;
+	}
+.errorRow{
+	color:#5f0a0a;
+	margin-left: 18px;
+	Font-family: Arial;
+	Font-size:1.3em;
+	}
+.greenSelected{
+	background:#F3F7eb;
+	border:solid 1px #bfd485 !important;
+	}
+.questionInError{
+	background:#f6ecec;
+	border:solid 1px #950d0d !important;
+}
+.questionInError label {
+	font-weight: bold;
+	}
+
+.questionValid .tickcross {
+	background-image:url('../../images/lv/formTick.png');
+	background-position:right center; 
+	background-repeat:no-repeat;
+	padding-top: 5px;
+	padding-left: 31px;
+	}
+
+.questionInError .tickcross {
+	background-image:url('../../images/lv/formCross.png');
+	background-position:right center; 
+	background-repeat:no-repeat;
+	padding-top: 5px;
+	padding-left: 31px;
+	}
+
+fieldset .tickcross {
+	background-position:right bottom !important; 
+	padding-bottom: 5px !important;
+	}
+	
+#errorSummary {
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight: bold;
+	display: block;
+	font-size: 1.3em;
+	}
+.content{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow: hidden;
+	}
+input{
+	vertical-align:middle;
+	}
+#ajaxHelp {
+	position: absolute;
+	top: 0;
+	width: 300px;
+	font-size: 1.25em;
+	left: 450px;
+}
+#ajaxHelp #helpContent div.popupHelp #helpArrow {
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-right: 26px solid #76970b;
+	right: 100%;
+}
+#ajaxHelp #helpContent div.popupHelp #helpArrow  > div {
+	height: 0;
+	width: 0;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-right: 26px solid white;
+	position: absolute;
+	left: 2px;
+	top: -13px;
+}
+#ajaxHelp #helpContent #helpShadow {
+	-moz-box-shadow: 0px 10px 5px #9C9C9C;
+	-webkit-box-shadow: 0px 10px 5px #9C9C9C;
+	box-shadow: 0px 10px 5px #9C9C9C;
+	border-radius: 50% / 20px;
+	-moz-border-radius: 50% / 20px;
+	-webkit-border-radius: 400px 80px; /* webkit browsers apparently can’t use a % for ellipse border radius */	
+	position: absolute;
+	width: 97%;
+	height: 40px;
+	left: 5px;
+	bottom: 0;
+	z-index: 10;
+	behavior: url('./css/css3pie/PIE.1.0.htc');
+}
+#ajaxHelp #helpContent div.popupHelp {
+	-moz-border-radius:7px;border-radius:7px; 
+	border: 2px solid #76970b;
+	background-color: white;
+	padding: 1em;
+	z-index: 20;
+	position: relative;
+	behavior: url('./css/css3pie/PIE.1.0.htc');
+}
+#ajaxHelp #helpContent div.popupHelp div#theHelp h2{
+	font-weight:bold;
+	padding-bottom:0.5em;
+}
+
+/* dob progressively enhanced fields */
+#row_canonicalQuote_quoteRisk_drivers_driver0_personalDetails_dateOfBirth .dayDropdown {
+	width: 50px;
+	min-width: 50px;
+}
+#row_canonicalQuote_quoteRisk_drivers_driver0_personalDetails_dateOfBirth .monthDropdown {
+	width: 100px;
+	min-width: 100px;
+	margin-left: 5px;
+}
+#row_canonicalQuote_quoteRisk_drivers_driver0_personalDetails_dateOfBirth .yearField {
+	width: 50px;
+	min-width: 50px;
+	margin-left: 5px;
+	margin-bottom: 4px;
+}
+
+/* cover start date progressively enhanced fields */
+#row_canonicalQuote_quoteRisk_proposal_coverStartDate .dayDropdown {
+	width: 50px;
+	min-width: 50px;
+}
+#row_canonicalQuote_quoteRisk_proposal_coverStartDate .monthDropdown {
+	width: 100px;
+	min-width: 100px;
+	margin-left: 5px;
+}
+#row_canonicalQuote_quoteRisk_proposal_coverStartDate .yearDropdown {
+	width: 60px;
+	min-width: 60px;
+	margin-left: 5px;
+}
+
+#selectedAddress {
+	display: block
+}
+
+#convictionsTable label, #claimsTable label,
+#convictionsTable caption, #claimsTable caption,
+#convictionsTable th.actionColumnHeading, #claimsTable th.actionColumnHeading {
+	/* move the labels for the field within the claims and convictions tables off screen */
+	left: -9999px;
+	position: absolute;
+}
+#convictionsTableSection .dayDropdown, #claimsTable .dayDropdown{
+	min-width: 50px;	
+}
+
+#convictionsTableSection .monthDropdown,  #claimsTable .monthDropdown{
+	min-width: 100px;
+	margin-left:4px;
+}
+
+#convictionsTableSection .yearField,  #claimsTable .yearField{
+	width:50px;
+	margin-bottom: 4px;
+    margin-left: 5px;
+		
+}
+
+#ribbon {
+	width:960px;
+	margin:0 auto;
+}
+
+#yourQuoteRibbon {
+	display:inline;
+	position: absolute;
+	z-index:1;
+	top:-2px;
+	margin-left:-10px;
+}

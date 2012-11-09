@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+	<int:gateway 
+		default-request-channel="reqs"
+		service-interface="service.QuestionnaireGateway"></int:gateway>
+
+	<int:channel id="reqs">
+		<int:interceptors>
+			<int:wire-tap channel="logger"/>
+		</int:interceptors>
+	</int:channel>
+
+	<int:service-activator input-channel="reqs">
+		<bean class="service.Valigator"></bean>
+	</int:service-activator>
+
+	<int:channel id="logger"></int:channel>
+	
+	<int:logging-channel-adapter log-full-message="true" channel="logger" level="DEBUG"></int:logging-channel-adapter>
+	
+	<bean id="answers" class="answers.Answers" />
+	
+</beans>

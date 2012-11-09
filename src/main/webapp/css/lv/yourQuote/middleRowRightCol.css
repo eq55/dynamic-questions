@@ -1,0 +1,72 @@
+#rightColumn {
+	padding-top:14px;
+	width:254px;
+}
+#rightColumn #driverInfo a, #rightColumn #excessInfo a {
+	font-family:arial;
+	font-size:1.2em;
+	font-weight:bold;
+}
+#rightColumn h2 {
+	font-size:1.4em;
+}
+#rightColumn .quoteRef h4 {
+	border:solid 1px #D9E4E6;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	padding:8px;
+	margin-left:-10px;
+}
+#rightColumn h4 span {
+	font-weight:bold;
+}
+#rightColumn #driverInfo {
+	margin-bottom:0;
+	border:none;
+}
+#rightColumn #driverInfo h2 {
+	display:inline;	
+}
+#rightColumn #driverInfo ul {
+	padding-left:12px;
+	display:inline;	
+}
+#rightColumn #driverInfo li {
+	margin-right:10px;
+	display:inline;
+}
+#rightColumn #driverInfo p {
+	margin-top:10px;
+}
+#rightColumn #contactDetails {
+	border:none;
+}
+#rightColumn #quoteRef {
+	border:none;
+}
+#rightColumn #excessInfo {
+	padding:20px 10px 100px 10px;
+	background:#e9f3f4;
+	margin:0;
+}
+#rightColumn #excessInfo ul {
+	margin-top:5px;
+}
+#rightColumn #excessInfo li {
+	
+	padding-top:5px;
+}
+
+#rightColumn #excessInfo a:link, #rightColumn #excessInfo a:visited, #rightColumn #excessInfo a:hover, #rightColumn #excessInfo a:active {
+	font-family:Arial;
+	margin-top:15px;
+	font-size:1.3em;
+	float:right;
+}
+#rightColumn #excessInfo p span {
+	font-weight:bold;
+	color:#024457;
+}
+#rightColumn #excessInfo li p span {
+	float:right;
+}

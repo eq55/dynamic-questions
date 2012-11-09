@@ -1,0 +1,21 @@
+body{
+	color : #11313F;
+	font-family: 'Tahoma', Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+body.lv, body.confused, body.comparethemarket, body.moneysupermarket, body.gocompare {
+	/*background : #BBCF53 url(/images/lv_bg_slice.png) repeat-x right top;
+	color: #ffffff;*/
+	/*opacity:0.5;
+	filter:alpha(opacity=50);*/	
+	background: #ccc;
+	font-size:62.5%;
+}
+
+*{
+	margin:0;
+	padding:0;	
+}
+body.nw, body.nwconfused, body.nwcomparethemarket, body.nwmoneysupermarket, body.nwgocompare {
+	background: #ffffff;	
+}
+

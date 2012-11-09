@@ -1,0 +1,95 @@
+/* =Responsive Structure
+----------------------------------------------- */
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 650px) {
+
+}
+
+@media (max-width: 450px) {
+	#rightColumn{display: none;}
+	#leftColumn{
+		width:320px;
+		margin-left: 14px;
+		margin-top: 35px;
+		padding:10px;
+	}
+	
+	p{
+		text-align:justify;
+		padding-right:10px;
+	}
+	
+	input[type=text]{
+	    width: 280px;
+	    float:left;
+		height:30px;
+		box-shadow:inset 0 0 10px #ccc; 
+		-moz-box-shadow:inset 0 0 10px #ccc;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.answer.yearField{
+		height:26px;
+		box-shadow:inset 0 0 10px #ccc; 
+		-moz-box-shadow:inset 0 0 10px #ccc;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	#leftColumn label {
+	    display: block;
+	}
+	
+	#leftColumn select{
+	    width: 280px;
+	    float:left;
+		height:30px;
+		font-size:1.4em;
+	}
+	
+	#leftColumn .row hr{
+	    margin-left: 10px;
+	    width: 300px;
+	    float: left;
+		display:none;
+	}
+	
+	.progressBarContainer{display: none;}
+	.progressBar{display: none;}
+	
+	#logo {margin-left: 50px;}
+	
+	.row{
+		height: 65px;
+		clear:left;
+	}
+	
+
+	
+	#row_canonicalQuote_quoteRisk_drivers_driver0_occupations_mainOccupationCode{
+		margin:35px 0 0 0;	
+	}
+	
+	#row_canonicalQuote_quoteRisk_proposerDetails_correspondenceAddress_postcode{
+		margin:0 0 20px 0;
+	}
+	
+	#leftColumn input[type="image"]{
+		display:block;
+	}
+	
+
+	.linkToOverlay{
+		display:none;
+	}
+	
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+}

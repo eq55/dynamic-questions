@@ -1,0 +1,202 @@
+#leftColumn{
+	background: none;
+    border: none;
+}
+#middleRow{
+	overflow: hidden; 	
+}
+#middleRow #coverSelect ul {
+	overflow:hidden;
+}
+#middleRow #coverSelect ul li {
+	float:left;
+}
+#middleRow #coverSelect label {
+	font-weight:bold;
+}
+#middleRow #coverSelect select {
+	margin-left:16px;
+}
+
+#middleRow .coverBenefits {
+	margin-top:10px;
+	margin-left:16px;
+}
+#middleRow .coverBenefits h3{
+    margin: 10px 0 15px;
+    width: 100%;
+}
+#middleRow #leftColumn #CompCover{
+	font-family: 'Tahoma',Verdana,Arial;
+	background: #E3F0F0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:1px solid #d9e4e6;
+	padding: 16px;
+	font-size: 1.2em;
+	margin-top:2px;	 	
+}
+
+#middleRow #leftColumn h3{
+ 	font-size: 1.68em;
+ 	margin-left: 0px;
+}
+
+#middleRow #leftColumn #CompCover .addCoverOptionArea .addCoverOption.selected{
+	background: none repeat scroll 0 0 #E3F0F0;
+    margin-left: -10px;
+    width: 676px;
+    -webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	padding-left:10px;
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption.selected .addCoveractionButtons{
+	margin-right: 20px;	
+}
+
+
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption .addCoveractionButtons{
+	margin-right: 10px;
+	margin-top: -10px;	
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption .addCoveractionButtons.firstOption{
+	margin-top: 10px;
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .firstOption strong.innerBold{
+	font-weight: bold;
+	font-size: 1.16em;	
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .firstOption p.fullWidth{
+	font-size: 1.1em;
+	font-weight: bold;
+	width:418px;	
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption p{
+	width:410px;
+	padding: 5px 0 0 6px;	
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption p img{
+	vertical-align: middle;
+	margin: 0 0 0 5px;	
+}
+
+#middleRow #addCoverOptionArea {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fff;
+	padding: 16px;
+	margin-top:10px;
+	width: 642px;
+}
+#middleRow #addCoverOptionArea .coverOptionTypeIcon {
+	float:left;		
+}
+
+#middleRow #addCoverOptionArea .addCoverOption{
+	width:646px;
+	padding: 10px 0 10px 0;
+	border-bottom:1px dashed #E3F0F0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow:hidden;
+}
+#middleRow #addCoverOptionArea .addCoverOption span {
+	float:left;
+	margin-top:3px;
+	padding-left:5px;
+}
+#middleRow #addCoverOptionArea .addCoverOption span strong span {
+	float:none;
+}
+#middleRow #addCoverOptionArea .addCoverOption span img {
+	margin-left:10px;
+}
+#middleRow #addCoverOptionArea .addCoveractionButtons {
+	float:right;	
+}
+#middleRow #addCoverOptionArea .coverTypeTagLine {
+	color:#185d75;
+	margin-top:3px;
+	clear: left;
+}
+
+#middleRow strong.coverOptionItemTitle{
+	font-weight: bold;
+	font-family: tahoma;
+	font-size: 1.4em;
+	float:left;
+}
+#middleRow strong.coverOptionItemTitle span {
+	font-weight: normal;
+}
+
+#middleRow #leftColumn #compCover .addCoverOptionArea .addCoverOption p strong.coverOptionItemTitle span{
+	font-size: 1.2em;
+}
+
+#middleRow #additionalSecurity {
+ 	background-image: -moz-linear-gradient(center top , #F2F8FA, #FFFFFF);
+    border: 1px solid #FFFFFF;
+    padding-left: 5px;
+    width: 100%;
+}
+#middleRow #additionalSecurity img {
+	margin:5px 0 0 5px;
+	float:left;
+}
+#middleRow #additionalSecurity #warningText {
+	margin-top:15px;
+	margin-bottom:15px;	
+}
+#middleRow #additionalSecurity a {
+	color: #A2C13C;
+	text-decoration: underline;
+	font-weight: bold;
+	font-style: italic;	
+}
+
+
+
+#middleRow .coverBenefits ul {
+	padding: 0 0 1.25em 1em;
+	margin-top: 20px;
+	overflow:hidden;
+}
+#middleRow .coverBenefits li {
+   	background: url("../../../images/lv/tickLarge.gif") no-repeat scroll left center transparent;
+    display: block;
+    font-size: 1.2em;
+    list-style: none outside none;
+    padding: 4px 0 10px 28px;
+    width: 266px;
+    float:left;
+}
+
+.dayDropdown {
+	width: 50px;
+	min-width: 50px !important;
+}
+.monthDropdown {
+	width: 100px;
+	min-width: 100px !important;
+	margin-left: 5px;
+}
+.yearDropdown {
+	width: 60px;
+	min-width: 60px !important;
+	margin-left: 5px;
+}
+.infoIcon, .ui-datepicker-trigger {
+	vertical-align: text-bottom;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+  <definition name="test" template="layout">
+    <put-attribute name="content" value="content"/>
+    <put-attribute name="title" value="title"/>
+    <put-attribute name="postcodeQuestion" value="postcodeQuestion"/>
+    <put-attribute name="overlay" value="overlay"/>
+  </definition>
+
+  <definition name="content" template="AboutYourCar :: formContent"/>
+  <definition name="title" template="AboutYourCar :: title"/>
+  <definition name="postcodeQuestion" template="AboutYourCar :: postcodeQuestion"/>
+  <definition name="overlay" template="calculatingQuote :: overlay"/>
+  
+  <definition name="quote" template="layout">
+    <put-attribute name="content" value="quoteContent"/>
+    <put-attribute name="title" value="title"/>
+    <put-attribute name="postcodeQuestion" value="postcodeQuestion"/>
+    <put-attribute name="overlay" value="overlay"/>
+  </definition>
+  
+  <definition name="quoteContent" template="quoteContent :: formContent"/>
+  
+</tiles-definitions>

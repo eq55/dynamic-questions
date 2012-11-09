@@ -1,0 +1,145 @@
+#bottomRow {
+	-moz-border-radius:8px;
+	border-radius:8px;
+	font-family:Tahoma;
+	border:1px solid #ddd;
+	background:#fff;
+	overflow:hidden;
+	color:#fff;
+	margin-top:12px;
+}
+
+#bottomRow img {
+	margin-left:13px;
+	float:left;
+}
+
+#bottomRow #left{
+	-moz-border-radius:6px 0 0 6px;
+	border-radius:6px 0 0 6px;
+	background:#4ab3bf;
+	background-image:-moz-linear-gradient(top, #297c8b, #4ab3bf, #55c5d0);
+	background-image:-webkit-linear-gradient(top, #297c8b, #4ab3bf, #55c5d0);
+	float:left;
+	margin: 2px 0 2px 2px;
+	width:704px;
+	height:150px;
+}
+
+#bottomRow #left h1 {
+	font-weight:bold;
+	font-size:4em;
+	text-shadow: 1px 1px #2a7d8c;
+}
+
+#bottomRow #left h1 span {
+	font-size:0.5em;
+	margin-right:-5px;
+	vertical-align:top;
+}
+
+#bottomRow #left h2 {
+	font-weight:bold;
+	font-size:1.6em;
+	text-shadow: 1px 1px #2a7d8c;
+}
+
+#bottomRow #left h3 {
+	font-family:Arial;
+	font-weight:bold;
+	font-size:1.2em;
+	padding:15px 15px 0 0;
+	text-shadow: 1px 1px #2a7d8c;
+}
+
+#bottomRow #singlePayment h2, #bottomRow #monthlyPayments h2{
+	font-size:4em;	
+}
+
+#bottomRow #singlePayment h3, #bottomRow #monthlyPayments h3{
+	font-size:1.6em;	
+}
+
+
+#bottomRow #left .quoteRef {
+	text-align:right;
+	text-shadow: 1px 1px #2a7d8c;
+}
+#bottomRow #left #monthlyPayments {
+	margin-top:5px;
+	margin-left:25px;
+	color:#fbfbfb;
+	float:left;	
+}
+
+#bottomRow #left #singlePayment {
+	margin-top:5px;
+	margin-left:25px;
+	float:left;		
+}
+
+#bottomRow #left #monthlyTerms {
+	padding-left:10px;
+	color:#FBFBFB;
+	font-size:1.2em;
+	display:block;	
+}
+
+#bottomRow #left #nextBtn {
+	margin-top:20px;
+	margin-right:12px;
+	float:right;	
+}
+
+#bottomRow #right {
+	-moz-border-radius:0 6px 6px 0;
+	border-radius:0 6px 6px 0;
+	background:#95d2d9;
+	background-image:-moz-linear-gradient(top, #83b4bd , #95d2d9 , #9cdde4 );
+	background-image:-webkit-linear-gradient(top, #83b4bd , #95d2d9 , #9cdde4 );
+	margin: 2px 2px 2px 0;
+	float:left;
+	width:250px;
+	height:150px;
+	color:#024457;
+}
+
+#bottomRow #right h2 {
+	font-weight:bold;
+	font-size:1.4em;
+	margin-top:20px;
+	padding-left:16px;
+	padding-bottom:10px;
+}
+#bottomRow #right p {
+	font-family:Arial;
+	font-size:1.3em;
+	padding-top:6px;
+	padding-left:16px;
+}
+#bottomRow #right a {
+	padding-left:12px;
+	color:#546b08;
+	font-family:arial;
+	font-size:0.857em;
+}
+#endRow{
+	margin-top:15px;	
+}
+#endRow ul {
+	float:left;
+	padding-left:140px;
+}
+#endRow input, #endRow ul li , #endRow ul li img {
+	float:left;
+}
+#endRow ul li p {
+	font-family:arial;
+	font-size:1.3em;
+	font-weight:bold;
+	padding:9px 60px 0 9px;
+	float:left;
+}
+.container {
+	overflow:hidden;
+}

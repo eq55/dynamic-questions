@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/css/lv/overlays.css}"
+	href="../../css/lv/overlays.css" />
+<link rel="stylesheet" th:href="@{/css/lv/templateStyle.css}"
+	href="../../css/lv/templateStyle.css" />
+</head>
+<body>
+	<div tiles:fragment="overlay" id="pleaseWaitCalculatingOverlay">
+		<div class="waitOverlay">
+			<div class="loading">
+				<div class="welcomeOverlayTopHalf">
+					<h2>Please wait whilst we calculate your quote...</h2>
+					<img th:src="@{/images/lv/welcomeOverlayHearts.gif}"
+						src="../../images/lv/welcomeOverlayHearts.gif" alt="loading..." />
+				</div>
+			</div>
+			<div class="welcomeOverlayBottomHalf">
+				<h2>
+					You'll <span>LV=</span> our car insurance because of our:
+				</h2>
+				<ul>
+					<li>UK call centres</li>
+					<li>24-hour claims helpline</li>
+					<li>Guaranteed repairs</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

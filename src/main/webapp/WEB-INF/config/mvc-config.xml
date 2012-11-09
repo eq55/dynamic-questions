@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Scans for application @Components to deploy -->
+	<context:component-scan base-package="controllers" />
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	
+	<!-- Configures a handler for serving static resources -->
+	<mvc:default-servlet-handler />
+	
+	<!-- Maps requests to flows in the flow registry; e.g. a path of /questionnaire looks for a flow with id questionnaire-flow.xml -->
+	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+		<property name="flowRegistry" ref="flowRegistry" />
+		<property name="order" value="-1" />
+	</bean>
+
+	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+		<property name="flowExecutor" ref="flowExecutor" />
+	</bean>
+
+	<bean id="templateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="prefix" value="/WEB-INF/templates/" />
+		<property name="suffix" value=".html" />
+		<property name="templateMode" value="HTML5" />
+	</bean>
+
+
+	<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine" p:templateResolver-ref="templateResolver">
+		<property name="additionalDialects">
+			<set>
+				<bean class="org.thymeleaf.extras.tiles2.dialect.TilesDialect" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="tilesViewResolver" class="org.thymeleaf.spring3.view.AjaxThymeleafViewResolver"
+		p:viewClass="org.thymeleaf.extras.tiles2.spring.web.view.FlowAjaxThymeleafTilesView"
+		p:templateEngine-ref="templateEngine" />
+	
+	<bean id="tilesConfigurer" class="org.thymeleaf.extras.tiles2.spring.web.configurer.ThymeleafTilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles-defs.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="rowDecoration" class="actions.RenderRowDecoration" />
+
+
+
+<!-- 	<bean id="messageSource" -->
+<!-- 		class="org.springframework.context.support.ResourceBundleMessageSource"> -->
+<!-- 		<property name="basename" value="giolp" /> -->
+<!-- 	</bean> -->
+	
+	<bean id="lvThemeSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="theme" />
+	</bean>
+	
+	<bean id="themeResolver" class="org.springframework.web.servlet.theme.CookieThemeResolver">
+		<property name="defaultThemeName" value="lv"/>
+		<property name="cookieMaxAge" value="3600" />
+	</bean>
+	
+	<bean id="lvThemeResolver" class="resolvers.LVThemeResolver">
+		<constructor-arg index="0"
+		type="org.springframework.context.support.ResourceBundleMessageSource">
+			<ref local="lvThemeSource"/>
+		</constructor-arg>
+	</bean>
+	
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+			<property name="cacheSeconds" value="0" />
+			<property name="supportedMethods">
+				<null />
+			</property>
+		</bean>
+
+		<bean class="interceptors.LVThemeChangeInterceptor" />
+	</mvc:interceptors>
+	
+</beans>
