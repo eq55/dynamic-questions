@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div tiles:fragment="formContent">
-			<form id="quote" class="content" action="/dynamic-questions-2/questionnaire" method="post" th:object="${answers}" >
+			<form id="quote" class="content" method="post" th:object="${answers}" >
 				<div id="leftColumn">
 					<div class="row" th:each="question, iterStat : ${questions}">
 						<label class="question" th:text="${question.text.labelText}">A question</label>
@@ -23,7 +23,8 @@
 						</span>
 						<input type="checkbox" class="answer" th:if="${question.renderType.equals('checkbox')}" />
 					</div>
-					<input id="submitter" type="image" th:src="@{/images/lv/nextBtn.png}" src="../../images/lv/nextBtn.png" name="_eventId_Next" alt="Next" />
+ 					<input id="submitter" type="image" th:src="@{/images/lv/nextBtn.png}" src="../../images/lv/nextBtn.png" name="_eventId_Next" alt="Next" />
+					<!--  <input id="tc_submit" type="submit" name="_eventId_next" alt="Next" value="next" /> -->
 				</div>
 			</form>
 		</div>
