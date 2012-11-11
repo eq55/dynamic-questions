@@ -13,7 +13,7 @@ public class DynamicQuestionFlowAdaptor extends FlowExecutionListenerAdapter {
 	public void eventSignaled(RequestContext context, Event event) {
 		// TODO Auto-generated method stub
 		super.eventSignaled(context, event);
-		System.out.println("***eventSignaled:");
+		System.out.println("***eventSignaled:" + event.toString());
 	}
 	
 	@Override
@@ -21,7 +21,7 @@ public class DynamicQuestionFlowAdaptor extends FlowExecutionListenerAdapter {
 			throws EnterStateVetoException {
 		// TODO Auto-generated method stub
 		super.stateEntering(context, state);
-		System.out.println("***stateEntering:");
+		System.out.println("***stateEntering:" + state.toString());
 	}
 	
 	@Override
@@ -29,7 +29,7 @@ public class DynamicQuestionFlowAdaptor extends FlowExecutionListenerAdapter {
 			StateDefinition viewState) {
 		// TODO Auto-generated method stub
 		super.viewRendering(context, view, viewState);
-		System.out.println("***viewRendering:");
+		System.out.println("***viewRendering:" + view.toString());
 	}
 
 }

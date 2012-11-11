@@ -4,15 +4,19 @@
 		xsi:schemaLocation="http://www.springframework.org/schema/webflow 
 							http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 	
-	<view-state id="quote" view="quote" model="answers">
-		<var name="answers" class="answers.Answers" />
+	<var name="answers" class="answers.Answers" />
+	
+	<view-state id="askQuestions" view="quote" model="answers">
     	<on-render>
     		<evaluate expression="riskDataQuestionnaire.getSomeQuestions" />
     	</on-render>
-    	<transition on="submit" to="test" />
-    	<transition on="Next" to="test" />
+    	<transition on="Next" to="anymoreQuestions" />
     </view-state>
+    
+    <decision-state id="anymoreQuestions">
+    	<if test="answers.pageAnswers['Find Your Car']?.size() > 0" then="quoteDone" else="askQuestions"/>
+    </decision-state>
 	
-	<view-state id="test" view="test" />
+	<view-state id="quoteDone" view="test" />
 	
 </flow>
